@@ -6,6 +6,7 @@
 #include "mbed.h"
 #include "ThisThread.h"
 #include "stats_report.h"
+#include "platform/mbed_debug.h"
 
 DigitalOut led1(LED1);
 
@@ -15,6 +16,7 @@ DigitalOut led1(LED1);
 // main() runs in its own thread in the OS
 int main()
 {
+    debug("main program start\r\n");
     SystemReport sys_state( SLEEP_TIME * PRINT_AFTER_N_LOOPS /* Loop delay time in ms */);
 
     int count = 0;
